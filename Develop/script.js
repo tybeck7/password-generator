@@ -11,7 +11,7 @@ generatePassword=()=>{
   var passwordLength=prompt("enter a password length of 8-128 characters")
   if (passwordLength >128 || passwordLength < 8){
     alert("Read the instructions...")
-    return generatePassword()
+    return generatedPassword()
   }
   var lowerConfirm= confirm("would you like lowercase characters?")
   if (lowerConfirm){
@@ -32,11 +32,11 @@ generatePassword=()=>{
   }
   if (!lowerConfirm && !upperConfirm && !numConfirm && !specConfirm) {
     alert ("you have to pick a criteria")
-    return generatePassword()
+    return generatedPassword()
   }
 
 
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 128; i++) {
     generatedPassword+=charBase.charAt(Math.floor(Math.random()*charBase.length))
   }
   return generatedPassword
