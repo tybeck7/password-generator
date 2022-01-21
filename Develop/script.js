@@ -34,21 +34,12 @@ generatePassword=()=>{
     alert ("you have to pick a criteria")
     return generatedPassword()
   }
-
-
+  
+  
   for (let i = 0; i < 128; i++) {
     generatedPassword+=charBase.charAt(Math.floor(Math.random()*charBase.length))
   }
   return generatedPassword
-
-
-
-
-
-
-
-
-
 
 
 }
